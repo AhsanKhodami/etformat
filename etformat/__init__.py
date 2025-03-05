@@ -9,6 +9,9 @@ try:
 except ModuleNotFoundError:
     __version__ = "dev"  # Fallback for development mode
 
+# Print a message when the package is imported
+print(f"📖 etformat {__version__} - For Documentation, visit: https://ahsankhodami.github.io/etformat/intro.html")
+
 # Importing necessary modules to make them accessible when using `import etformat`
 from .calibration import *
 from .channels import *
