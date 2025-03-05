@@ -9,6 +9,10 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
+    # ✅ Add permissions to allow trusted publishing
+    permissions:
+      id-token: write  # Required for OpenID Connect authentication
+
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
@@ -30,6 +34,4 @@ jobs:
         run: python -m build
 
       - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.8.11  # Use the latest version
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        uses: pypa/gh-action-pypi-publish@v1.8.11
