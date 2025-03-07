@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -174,7 +174,7 @@
 <li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="export.html">Converting EDF to CSV</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot_gaze.html">🅿️ Plot Gaze</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ lot Saccades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ Plot Saccades</a></li>
 </ul>
 
     </div>
@@ -409,6 +409,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📖 etformat 1.1.1 - For Documentation, visit: https://ahsankhodami.github.io/etformat/intro.html
+</pre></div>
+</div>
+</div>
 </div>
 <p>To read edf file information you can use the following code:</p>
 <div class="cell docutils container">
@@ -423,14 +428,14 @@
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">et</span><span class="o">.</span><span class="n">edfinfo</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;K:\Packages for python\etformat misc\test.EDF&quot;</span><span class="p">)</span>
 
-<span class="nn">File k:\packages for python\etformat\etformat\edfinfo.py:29,</span> in <span class="ni">edfinfo</span><span class="nt">(edf_file_path)</span>
+<span class="nn">File ~\AppData\Roaming\Python\Python312\site-packages\etformat\edfinfo.py:29,</span> in <span class="ni">edfinfo</span><span class="nt">(edf_file_path)</span>
 <span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">return</span>
 <span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="c1"># Load EDF file</span>
 <span class="ne">---&gt; </span><span class="mi">29</span> <span class="n">edf</span> <span class="o">=</span> <span class="n">EDFFile</span><span class="p">(</span><span class="n">edf_file_path</span><span class="p">,</span> <span class="n">loadevents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loadsamples</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="k">if</span> <span class="n">edf</span><span class="o">.</span><span class="n">recordings</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
 <span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ No recording information found in the EDF file.&quot;</span><span class="p">)</span>
 
-<span class="nn">File k:\packages for python\etformat\etformat\edffile.py:103,</span> in <span class="ni">EDFFile.__init__</span><span class="nt">(self, filename, consistency, loadevents, loadsamples, sample_fields, start_marker_string, end_marker_string, parse_events, wide_variables, trigger_marker, verbose, libpath)</span>
+<span class="nn">File ~\AppData\Roaming\Python\Python312\site-packages\etformat\edffile.py:103,</span> in <span class="ni">EDFFile.__init__</span><span class="nt">(self, filename, consistency, loadevents, loadsamples, sample_fields, start_marker_string, end_marker_string, parse_events, wide_variables, trigger_marker, verbose, libpath)</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="n">data_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edfapi</span><span class="o">.</span><span class="n">edf_get_next_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="k">while</span> <span class="n">data_type</span> <span class="o">!=</span> <span class="n">EDF_NO_PENDING_ITEMS</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">103</span>     <span class="n">allf_data_ptr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edfapi</span><span class="o">.</span><span class="n">edf_get_float_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">)</span>
