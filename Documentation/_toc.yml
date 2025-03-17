@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 chapters:
+- file: Info
+- file: DCMA
+- file: before_installation
+- file: Cite
 - file: edfinfo
 - file: describe
 - file: calibration
