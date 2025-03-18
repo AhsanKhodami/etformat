@@ -414,18 +414,37 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
-<span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;K:\Packages for python\etformat misc\test.EDF&quot;</span><span class="p">)</span>
+<span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test.EDF&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📖 etformat 1.1.1 - For Documentation, visit: https://ahsankhodami.github.io/etformat/intro.html
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;K:\Packages for python\etformat misc\test.EDF&quot;</span><span class="p">)</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test.EDF&quot;</span><span class="p">)</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;etformat&#39;
+<span class="nn">File ~\AppData\Roaming\Python\Python312\site-packages\etformat\describe.py:34,</span> in <span class="ni">describe</span><span class="nt">(data_source, trial_number)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="k">return</span> <span class="kc">None</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="c1"># Load EDF file</span>
+<span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">edf</span> <span class="o">=</span> <span class="n">EDFFile</span><span class="p">(</span><span class="n">edf_file_path</span><span class="p">,</span> <span class="n">loadevents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loadsamples</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="k">if</span> <span class="n">edf</span><span class="o">.</span><span class="n">samples</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">edf</span><span class="o">.</span><span class="n">events</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ No valid sample or event data found in the EDF file.&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Roaming\Python\Python312\site-packages\etformat\edffile.py:103,</span> in <span class="ni">EDFFile.__init__</span><span class="nt">(self, filename, consistency, loadevents, loadsamples, sample_fields, start_marker_string, end_marker_string, parse_events, wide_variables, trigger_marker, verbose, libpath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="n">data_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edfapi</span><span class="o">.</span><span class="n">edf_get_next_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="k">while</span> <span class="n">data_type</span> <span class="o">!=</span> <span class="n">EDF_NO_PENDING_ITEMS</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>     <span class="n">allf_data_ptr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edfapi</span><span class="o">.</span><span class="n">edf_get_float_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>     <span class="k">if</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">EDF_EVENT_CODES</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>         <span class="c1"># trial start</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span>         <span class="k">if</span> <span class="n">data_type</span> <span class="o">==</span> <span class="n">EDF_EVENTS</span><span class="p">[</span><span class="s2">&quot;MESSAGEEVENT&quot;</span><span class="p">]</span> <span class="ow">and</span> \
+<span class="g g-Whitespace">    </span><span class="mi">107</span>            <span class="n">allf_data_ptr</span><span class="o">.</span><span class="n">contents</span><span class="o">.</span><span class="n">fe</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">start_marker_string</span><span class="p">):</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -441,8 +460,8 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
 
 <span class="c1"># Load CSV files</span>
-<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;K:\Packages for python\etformat misc\test_samples.csv&quot;</span><span class="p">)</span>
-<span class="n">events</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;K:\Packages for python\etformat misc\test_events.csv&quot;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test_samples.csv&quot;</span><span class="p">)</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test_events.csv&quot;</span><span class="p">)</span>
 
 <span class="c1"># Describe all trials using the CSV DataFrames</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">((</span><span class="n">events</span><span class="p">,</span> <span class="n">samples</span><span class="p">))</span>
