@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ℹ️ About Me" href="Info.html" />
+    <link rel="next" title="🖇️ EDF Info" href="edfinfo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,17 +181,15 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Info.html">ℹ️ About Me</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="DCMA.html">🛡️ DMCA Notice &amp; Acknowledgment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="before_installation.html">🔔 Before Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cite.html">📖 How to Cite My Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edfinfo.html">🖇️ EDF Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="describe.html">📖 describe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="calibration.html">👁️ Calibration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="export.html">📂 Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clean.html">🧹 clean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">📑 report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saccade_analysis.html">📊 saccade_amplitude_average</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot_gaze.html">🅿️ Plot Gaze</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ Plot Saccades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ lot Saccades</a></li>
 </ul>
 
     </div>
@@ -436,22 +434,29 @@ document.write(`
 
 <span class="c1"># Extract calibration details</span>
 <span class="n">et</span><span class="o">.</span><span class="n">calibration</span><span class="p">(</span><span class="s2">&quot;test.EDF&quot;</span><span class="p">)</span>
+
+<span class="c1">#Clean EDF fiel and Preprocess</span>
+<span class="n">et</span><span class="o">.</span><span class="n">clean</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">)</span>
+
+<span class="c1">#Average Saccade Report</span>
+<span class="n">et</span><span class="o">.</span><span class="n">saccade_amplitude_average</span><span class="p">(</span><span class="n">events</span><span class="p">)</span>
+
+<span class="c1">#Recording report</span>
+<span class="n">et</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">events</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>✅ <strong>Easy to use, powerful, and built for eye-tracking research!</strong> 🚀</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Info.html">ℹ️ About Me</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Info.html#connect-with-me">🌐 Connect with Me</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DCMA.html">🛡️ DMCA Notice &amp; Acknowledgment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="before_installation.html">🔔 Before Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cite.html">📖 How to Cite My Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edfinfo.html">🖇️ EDF Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="describe.html">📖 describe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="calibration.html">👁️ Calibration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="export.html">📂 Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clean.html">🧹 clean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">📑 report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saccade_analysis.html">📊 saccade_amplitude_average</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot_gaze.html">🅿️ Plot Gaze</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ Plot Saccades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ lot Saccades</a></li>
 </ul>
 </div>
 </section>
@@ -487,11 +492,11 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="Info.html"
+       href="edfinfo.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ℹ️ About Me</p>
+        <p class="prev-next-title">🖇️ EDF Info</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

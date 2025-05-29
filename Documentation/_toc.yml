@@ -4,14 +4,13 @@
 format: jb-book
 root: intro
 chapters:
-- file: Info
-- file: DCMA
-- file: before_installation
-- file: Cite
 - file: edfinfo
 - file: describe
 - file: calibration
 - file: export
+- file: clean
+- file: report
+- file: saccade_analysis
 - file: plot_gaze
 - file: plot_saccade
 

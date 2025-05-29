@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>🅿️ Plot Saccades &#8212; etinfo - EyeTracking EDF file conversion and analysis</title>
+    <title>🅿️ lot Saccades &#8212; etinfo - EyeTracking EDF file conversion and analysis</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -179,17 +179,15 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Info.html">ℹ️ About Me</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="DCMA.html">🛡️ DMCA Notice &amp; Acknowledgment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="before_installation.html">🔔 Before Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cite.html">📖 How to Cite My Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edfinfo.html">🖇️ EDF Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="describe.html">📖 describe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="calibration.html">👁️ Calibration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="export.html">📂 Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clean.html">🧹 clean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">📑 report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saccade_analysis.html">📊 saccade_amplitude_average</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot_gaze.html">🅿️ Plot Gaze</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">🅿️ Plot Saccades</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">🅿️ lot Saccades</a></li>
 </ul>
 
     </div>
@@ -373,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>🅿️ Plot Saccades</h1>
+    <h1>🅿️ lot Saccades</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -387,16 +385,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="plot-saccades">
-<h1>🅿️ Plot Saccades<a class="headerlink" href="#plot-saccades" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lot-saccades">
+<h1>🅿️ lot Saccades<a class="headerlink" href="#lot-saccades" title="Link to this heading">#</a></h1>
 <p>Saccades are essential for vision. They are rapid, ballistic eye movements that redirect the fovea to a new target. Saccades are typically classified into two types: <strong>voluntary</strong> and <strong>reflexive</strong>. Voluntary saccades are under conscious control and are used to explore the visual world. Reflexive saccades are automatic responses to sudden changes in the visual field.</p>
 <p>to plot saccades using <code class="docutils literal notranslate"><span class="pre">etformat</span></code> you need to use the <code class="docutils literal notranslate"><span class="pre">plot_saccades</span></code> function. This function will plot the saccades on top of the gaze data. The saccades are plotted as lines with an arrow indicating the direction of the saccade.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">events</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test_events.csv&quot;</span><span class="p">)</span>
-<span class="n">et</span><span class="o">.</span><span class="n">plot_saccades</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">trial_number</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\Github_web_page_website\test_events.csv&quot;</span><span class="p">)</span>
+<span class="n">et</span><span class="o">.</span><span class="n">plot_saccades</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">trial_number</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -405,10 +403,10 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>⚠️ Default screen size is 2560x1440. If incorrect, specify `screen_width` and `screen_height` in the function call.
-Trial 3 has 32 gaze movements.
+Trial 15 has 9 gaze movements.
 </pre></div>
 </div>
-<img alt="_images/f5afb9ecccaf10a057aae0b10168ba03a2ff9466d8e51085c72719266e03c6ab.png" src="_images/f5afb9ecccaf10a057aae0b10168ba03a2ff9466d8e51085c72719266e03c6ab.png" />
+<img alt="_images/a21970c7e7ec09ff35eda3c39cd0208ce641489bfd3879b07d0da1c8f95ad96f.png" src="_images/a21970c7e7ec09ff35eda3c39cd0208ce641489bfd3879b07d0da1c8f95ad96f.png" />
 </div>
 </div>
 </section>

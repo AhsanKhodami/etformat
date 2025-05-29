@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'describe';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="👁️ Calibration" href="calibration.html" />
+    <link rel="next" title="Calibration" href="calibration.html" />
     <link rel="prev" title="🖇️ EDF Info" href="edfinfo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,17 +180,15 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Info.html">ℹ️ About Me</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="DCMA.html">🛡️ DMCA Notice &amp; Acknowledgment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="before_installation.html">🔔 Before Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cite.html">📖 How to Cite My Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edfinfo.html">🖇️ EDF Info</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">📖 describe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="calibration.html">👁️ Calibration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="export.html">📂 Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clean.html">🧹 clean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">📑 report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saccade_analysis.html">📊 saccade_amplitude_average</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot_gaze.html">🅿️ Plot Gaze</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ Plot Saccades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ lot Saccades</a></li>
 </ul>
 
     </div>
@@ -414,7 +412,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
-<span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test.EDF&quot;</span><span class="p">)</span>
+<span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\Github_web_page_website\test.EDF&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -426,16 +424,16 @@ document.write(`
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test.EDF&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\Github_web_page_website\test.EDF&quot;</span><span class="p">)</span>
 
-<span class="nn">File ~\AppData\Roaming\Python\Python312\site-packages\etformat\describe.py:34,</span> in <span class="ni">describe</span><span class="nt">(data_source, trial_number)</span>
+<span class="nn">File ~\AppData\Local\Programs\Python\Python312\Lib\site-packages\etformat\describe.py:34,</span> in <span class="ni">describe</span><span class="nt">(data_source, trial_number)</span>
 <span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="k">return</span> <span class="kc">None</span>
 <span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="c1"># Load EDF file</span>
 <span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">edf</span> <span class="o">=</span> <span class="n">EDFFile</span><span class="p">(</span><span class="n">edf_file_path</span><span class="p">,</span> <span class="n">loadevents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loadsamples</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="k">if</span> <span class="n">edf</span><span class="o">.</span><span class="n">samples</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">edf</span><span class="o">.</span><span class="n">events</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚠️ No valid sample or event data found in the EDF file.&quot;</span><span class="p">)</span>
 
-<span class="nn">File ~\AppData\Roaming\Python\Python312\site-packages\etformat\edffile.py:103,</span> in <span class="ni">EDFFile.__init__</span><span class="nt">(self, filename, consistency, loadevents, loadsamples, sample_fields, start_marker_string, end_marker_string, parse_events, wide_variables, trigger_marker, verbose, libpath)</span>
+<span class="nn">File ~\AppData\Local\Programs\Python\Python312\Lib\site-packages\etformat\edffile.py:103,</span> in <span class="ni">EDFFile.__init__</span><span class="nt">(self, filename, consistency, loadevents, loadsamples, sample_fields, start_marker_string, end_marker_string, parse_events, wide_variables, trigger_marker, verbose, libpath)</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="n">data_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edfapi</span><span class="o">.</span><span class="n">edf_get_next_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="k">while</span> <span class="n">data_type</span> <span class="o">!=</span> <span class="n">EDF_NO_PENDING_ITEMS</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">103</span>     <span class="n">allf_data_ptr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edfapi</span><span class="o">.</span><span class="n">edf_get_float_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_file</span><span class="p">)</span>
@@ -449,6 +447,10 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As and Per quesitons, the reason you see a NaN is because some meta data from binary files are reproduced which includes the calibration and other detail, that is why you need to use <code class="docutils literal notranslate"><span class="pre">clean</span></code> code to clean your data and remove the unneccessary row</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>if you see an error here regarding file is because of compiler error due to jupyter-book` code works in natural environment.</p>
@@ -456,174 +458,147 @@ document.write(`
 <p>if you have already exported data there are two seperate files after conversion which are <code class="docutils literal notranslate"><span class="pre">EDFfilename_events.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">EDFfilename_samples.csv</span></code> which can be used to analyze data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
-
-<span class="c1"># Load CSV files</span>
-<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test_samples.csv&quot;</span><span class="p">)</span>
-<span class="n">events</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test_events.csv&quot;</span><span class="p">)</span>
-
-<span class="c1"># Describe all trials using the CSV DataFrames</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">describe</span><span class="p">((</span><span class="n">events</span><span class="p">,</span> <span class="n">samples</span><span class="p">))</span>
-<span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load CSV files</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\Github_web_page_website\test_samples.csv&quot;</span><span class="p">)</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\Github_web_page_website\test_events.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">et</span><span class="o">.</span><span class="n">clean</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">events</span><span class="p">,</span> <span class="n">copy</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🧹 Starting data cleaning for eye-tracking data
+   📊 Samples: DataFrame with shape (1520309, 56)
+   📊 Events: DataFrame with shape (18261, 38)
+============================================================
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+🔍 Processing SAMPLES data...
+   Original samples shape: (1520309, 56)
+   Columns: 56
+   ❌ Removed 2522 rows with NaN trials
+   ❌ Removed 15 columns:
+      • time_rel (all_nan)
+      • pxL (all_nan)
+      • pyL (all_nan)
+      • hxL (all_nan)
+      • hyL (all_nan)
+      • paL (all_nan)
+      • gxL (all_nan)
+      • gyL (all_nan)
+      • hdata1 (all_zero)
+      • hdata6 (all_zero)
+      • hdata7 (all_zero)
+      • input (all_zero)
+      • buttons (all_zero)
+      • htype (all_nan)
+      • errors (all_zero)
+   ✅ Samples cleaned: (1520309, 56) → (1517787, 41)
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Trial</th>
-      <th>Total Duration (ms)</th>
-      <th>Total Samples</th>
-      <th>Number of Fixations</th>
-      <th>Number of Saccades</th>
-      <th>Number of Blinks</th>
-      <th>Avg Fixation Duration (ms)</th>
-      <th>Avg Saccade Amplitude</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2.0</td>
-      <td>9969.0</td>
-      <td>9970</td>
-      <td>33</td>
-      <td>33</td>
-      <td>1</td>
-      <td>302.090909</td>
-      <td>1.719866</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.0</td>
-      <td>8620.0</td>
-      <td>8621</td>
-      <td>32</td>
-      <td>32</td>
-      <td>0</td>
-      <td>269.375000</td>
-      <td>1.878651</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.0</td>
-      <td>4353.0</td>
-      <td>4354</td>
-      <td>11</td>
-      <td>11</td>
-      <td>1</td>
-      <td>395.727273</td>
-      <td>2.549112</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.0</td>
-      <td>13173.0</td>
-      <td>13174</td>
-      <td>42</td>
-      <td>42</td>
-      <td>2</td>
-      <td>313.642857</td>
-      <td>2.061150</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>475</th>
-      <td>476.0</td>
-      <td>2073.0</td>
-      <td>2074</td>
-      <td>6</td>
-      <td>6</td>
-      <td>1</td>
-      <td>345.500000</td>
-      <td>2.770143</td>
-    </tr>
-    <tr>
-      <th>476</th>
-      <td>477.0</td>
-      <td>2445.0</td>
-      <td>2446</td>
-      <td>7</td>
-      <td>6</td>
-      <td>1</td>
-      <td>349.285714</td>
-      <td>2.862927</td>
-    </tr>
-    <tr>
-      <th>477</th>
-      <td>478.0</td>
-      <td>2426.0</td>
-      <td>2427</td>
-      <td>5</td>
-      <td>5</td>
-      <td>1</td>
-      <td>485.200000</td>
-      <td>3.219999</td>
-    </tr>
-    <tr>
-      <th>478</th>
-      <td>479.0</td>
-      <td>2190.0</td>
-      <td>2191</td>
-      <td>7</td>
-      <td>8</td>
-      <td>2</td>
-      <td>312.857143</td>
-      <td>2.438215</td>
-    </tr>
-    <tr>
-      <th>479</th>
-      <td>480.0</td>
-      <td>2515.0</td>
-      <td>2516</td>
-      <td>7</td>
-      <td>6</td>
-      <td>0</td>
-      <td>359.285714</td>
-      <td>2.789500</td>
-    </tr>
-  </tbody>
-</table>
-<p>480 rows × 8 columns</p>
-</div></div></div>
+🔍 Processing EVENTS data...
+   Original events shape: (18261, 38)
+   Columns: 38
+   ❌ Removed 83 rows with NaN trials
+   ❌ Removed 7 columns:
+      • time (all_zero)
+      • sttime_rel (all_nan)
+      • entime_rel (all_nan)
+      • status (all_zero)
+      • flags (all_zero)
+      • input (all_zero)
+      • buttons (all_zero)
+   ✅ Events cleaned: (18261, 38) → (18178, 31)
+============================================================
+🎉 Cleaning completed!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(         trial     time     pxR     pyR    hxR    hyR     paR     gxR    gyR  \
+ 2522       1.0   392207 -3860.0 -2051.0  342.0  479.0  5275.0  1382.7  839.0   
+ 2523       1.0   392208 -3862.0 -2048.0  341.0  481.0  5275.0  1382.3  839.7   
+ 2524       1.0   392209 -3867.0 -2044.0  338.0  484.0  5276.0  1381.4  840.5   
+ 2525       1.0   392210 -3873.0 -2042.0  334.0  486.0  5276.0  1380.2  841.1   
+ 2526       1.0   392211 -3885.0 -2041.0  327.0  486.0  5276.0  1378.1  841.2   
+ ...        ...      ...     ...     ...    ...    ...     ...     ...    ...   
+ 1520304  480.0  1909989 -4790.0 -3160.0 -176.0 -336.0  4075.0  1226.6  594.4   
+ 1520305  480.0  1909990 -4790.0 -3155.0 -176.0 -332.0  4061.0  1226.6  595.5   
+ 1520306  480.0  1909991 -4794.0 -3135.0 -179.0 -317.0  4040.0  1225.7  599.9   
+ 1520307  480.0  1909992 -4799.0 -3115.0 -182.0 -303.0  4019.0  1224.8  604.3   
+ 1520308  480.0  1909993 -4803.0 -3095.0 -185.0 -288.0  3997.0  1224.0  608.7   
+ 
+            rx  ...      frxvelL       frxvelR       fryvelL       fryvelR  \
+ 2522     78.9  ...      -2010.0 -5.617007e+00  6.570000e-43  1.985040e+01   
+ 2523     78.9  ...      -2010.0 -3.629450e+01  6.570000e-43  2.028193e+01   
+ 2524     78.9  ...      -2010.0 -6.049084e+01  6.570000e-43  2.028193e+01   
+ 2525     78.9  ...      -2010.0 -7.518147e+01  6.570000e-43  2.071346e+01   
+ 2526     78.9  ...      -2010.0 -8.123055e+01  6.570000e-43  2.157653e+01   
+ ...       ...  ...          ...           ...           ...           ...   
+ 1520304  78.5  ...  100000000.0  1.000000e+08  6.570000e-43  1.000000e+08   
+ 1520305  78.5  ...  100000000.0  1.000000e+08  6.570000e-43  1.000000e+08   
+ 1520306  78.5  ...  100000000.0  1.000000e+08  6.570000e-43  1.000000e+08   
+ 1520307  78.5  ...  100000000.0  1.000000e+08  6.570000e-43  1.000000e+08   
+ 1520308  78.5  ...  100000000.0  1.000000e+08  6.570000e-43  1.000000e+08   
+ 
+          hdata0  hdata2  hdata3  hdata4  hdata5  flags  
+ 2522        469     -16      -1      -1      -1  24545  
+ 2523        469     -16      -1      -1      -1  24545  
+ 2524        469     -16      -1      -1      -1  24545  
+ 2525        469     -16      -1      -1      -1  24545  
+ 2526        469     -16      -1      -1      -1  24545  
+ ...         ...     ...     ...     ...     ...    ...  
+ 1520304     469     -16      -1      -1      -1  24545  
+ 1520305     469     -16      -1      -1      -1  24545  
+ 1520306     469     -16      -1      -1      -1  24545  
+ 1520307     469     -16      -1      -1      -1  24545  
+ 1520308     469     -16      -1      -1      -1  24545  
+ 
+ [1517787 rows x 41 columns],
+        trial          type  read   sttime   entime   hstx   hsty    gstx  \
+ 83       1.0        ENDFIX  7167   392195   392537  210.0  491.0  1342.9   
+ 84       1.0  MESSAGEEVENT     1   392207        0    0.0    0.0     0.0   
+ 85       1.0  MESSAGEEVENT     1   392207        0    0.0    0.0     0.0   
+ 86       1.0       ENDSACC  7007   392538   392558  307.0  483.0  1372.2   
+ 87       1.0     STARTSACC  6921   392538        0  307.0  483.0  1372.2   
+ ...      ...           ...   ...      ...      ...    ...    ...     ...   
+ 18256  480.0  MESSAGEEVENT     1  1909993        0    0.0    0.0     0.0   
+ 18257  480.0     ENDEVENTS    64  1909994  1909994    0.0    0.0     0.0   
+ 18258  480.0    ENDSAMPLES    64  1909994  1909994    0.0    0.0     0.0   
+ 18259  480.0    INPUTEVENT     1  1909994        0    0.0    0.0     0.0   
+ 18260  480.0   BUTTONEVENT     1  1909994        0    0.0    0.0     0.0   
+ 
+         gsty     sta  ...  pvel  svel  evel  supd_x  eupd_x  supd_y  eupd_y  \
+ 83     842.7  5268.0  ...  78.7  78.7  18.4    78.9    78.9    79.0    79.0   
+ 84       0.0     0.0  ...   0.0   0.0   0.0     0.0     0.0     0.0     0.0   
+ 85       0.0     0.0  ...   0.0   0.0   0.0     0.0     0.0     0.0     0.0   
+ 86     840.2     0.0  ...  93.8  28.6  39.5    78.9    78.7    79.0    78.7   
+ 87     840.2     0.0  ...   0.0  28.6   0.0    78.9     0.0    79.0     0.0   
+ ...      ...     ...  ...   ...   ...   ...     ...     ...     ...     ...   
+ 18256    0.0     0.0  ...   0.0   0.0   0.0     0.0     0.0     0.0     0.0   
+ 18257    0.0     0.0  ...   0.0   0.0   0.0     0.0     0.0     0.0     0.0   
+ 18258    0.0     0.0  ...   0.0   0.0   0.0     0.0     0.0     0.0     0.0   
+ 18259    0.0     0.0  ...   0.0   0.0   0.0     0.0     0.0     0.0     0.0   
+ 18260    0.0     0.0  ...   0.0   0.0   0.0     0.0     0.0     0.0     0.0   
+ 
+          eye  parsedby                                            message  
+ 83     RIGHT       192                                                NaN  
+ 84      LEFT         0                               Fixation Cross Shown  
+ 85      LEFT         0                                          TRIALID 1  
+ 86     RIGHT       192                                                NaN  
+ 87     RIGHT       192                                                NaN  
+ ...      ...       ...                                                ...  
+ 18256   LEFT         0  Experiment ending, stopping eye tracker recording  
+ 18257   LEFT       192                                                NaN  
+ 18258   LEFT         0                                                NaN  
+ 18259   LEFT         0                                                NaN  
+ 18260   LEFT         0                                                NaN  
+ 
+ [18178 rows x 31 columns])
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -635,13 +610,13 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Trial&#39;: 3.0,
- &#39;Total Duration (ms)&#39;: 8620.0,
- &#39;Total Samples&#39;: 8621.0,
- &#39;Number of Fixations&#39;: 32.0,
- &#39;Number of Saccades&#39;: 32.0,
+ &#39;Total Duration (ms)&#39;: 2659.0,
+ &#39;Total Samples&#39;: 2660.0,
+ &#39;Number of Fixations&#39;: 5.0,
+ &#39;Number of Saccades&#39;: 5.0,
  &#39;Number of Blinks&#39;: 0.0,
- &#39;Avg Fixation Duration (ms)&#39;: 269.375,
- &#39;Avg Saccade Amplitude&#39;: 1.8786510980887818}
+ &#39;Avg Fixation Duration (ms)&#39;: 531.8,
+ &#39;Avg Saccade Amplitude&#39;: 1.6931468949603112}
 </pre></div>
 </div>
 </div>
@@ -693,7 +668,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">👁️ Calibration</p>
+        <p class="prev-next-title">Calibration</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
