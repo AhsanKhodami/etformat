@@ -23,3 +23,6 @@ from .edfinfo import *
 from .export import export  # Ensure export is accessible
 from .plot_gaze import *
 from .plot_saccades import *
+from .clean import clean  # Add data cleaning functionality
+from .saccade_analysis import saccade_amplitude_average  # Add saccade amplitude analysis
+from .report import report  # Add trial report generation

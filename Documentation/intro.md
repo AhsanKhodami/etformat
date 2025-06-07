@@ -31,6 +31,15 @@ et.plot_saccades(events, trial_number=3)
 
 # Extract calibration details
 et.calibration("test.EDF")
+
+#Clean EDF fiel and Preprocess
+et.clean('file')
+
+#Average Saccade Report
+et.saccade_amplitude_average(events)
+
+#Recording report
+et.report(events)
 ```
 
 ✅ **Easy to use, powerful, and built for eye-tracking research!** 🚀

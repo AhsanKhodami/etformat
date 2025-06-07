@@ -74,7 +74,7 @@ def convert_edf_to_csv(
 
     # Save samples to CSV if available
     if loadsamples and hasattr(edf_file, "samples"):
-        edf_file.samples["trial"] = edf_file.samples["trial"].fillna(method="ffill")
+        edf_file.samples["trial"] = edf_file.samples["trial"].ffill()
         if edf_file.samples["trial"].min() == 0:  
             edf_file.samples["trial"] += 1  # Shift trials forward if needed
 

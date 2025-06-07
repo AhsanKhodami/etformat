@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'plot_gaze';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="🅿️ Plot Saccades" href="plot_saccade.html" />
-    <link rel="prev" title="📂 Converting EDF to CSV" href="export.html" />
+    <link rel="next" title="🅿️ lot Saccades" href="plot_saccade.html" />
+    <link rel="prev" title="📊 saccade_amplitude_average" href="saccade_analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,17 +180,15 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Info.html">ℹ️ About Me</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="DCMA.html">🛡️ DMCA Notice &amp; Acknowledgment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="before_installation.html">🔔 Before Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Cite.html">📖 How to Cite My Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edfinfo.html">🖇️ EDF Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="describe.html">📖 describe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="calibration.html">👁️ Calibration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="export.html">📂 Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration.html">Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Converting EDF to CSV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clean.html">🧹 clean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">📑 report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saccade_analysis.html">📊 saccade_amplitude_average</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">🅿️ Plot Gaze</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ Plot Saccades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_saccade.html">🅿️ lot Saccades</a></li>
 </ul>
 
     </div>
@@ -409,7 +407,7 @@ These are the screen width and height of the screen where the experiment was con
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">etformat</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">et</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;I:\Packages for python\etformat misc\test_samples.csv&quot;</span><span class="p">)</span>
+<span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D:\Github_web_page_website\test_samples.csv&quot;</span><span class="p">)</span>
 <span class="n">et</span><span class="o">.</span><span class="n">plot_gaze</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="n">screen_width</span><span class="o">=</span><span class="mi">2560</span><span class="p">,</span> <span class="n">screen_height</span><span class="o">=</span><span class="mi">1440</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -419,10 +417,10 @@ These are the screen width and height of the screen where the experiment was con
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>⚠️ Default screen size is 2560x1440. If incorrect, specify `screen_width` and `screen_height`.
-✅ Trial 45 has 9426 gaze points.
+✅ Trial 45 has 3246 gaze points.
 </pre></div>
 </div>
-<img alt="_images/947cdef159030b09b7df52841295aad051d7f54f3938d70331e6676184a15091.png" src="_images/947cdef159030b09b7df52841295aad051d7f54f3938d70331e6676184a15091.png" />
+<img alt="_images/4edc414af8497f7ba544f536d7911590dbeb0952b7d28931aaf05c02a00b3285.png" src="_images/4edc414af8497f7ba544f536d7911590dbeb0952b7d28931aaf05c02a00b3285.png" />
 </div>
 </div>
 <p>function also provides detail of number of gaze recorded during the trial.</p>
@@ -459,12 +457,12 @@ These are the screen width and height of the screen where the experiment was con
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="export.html"
+       href="saccade_analysis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">📂 Converting EDF to CSV</p>
+        <p class="prev-next-title">📊 saccade_amplitude_average</p>
       </div>
     </a>
     <a class="right-next"
@@ -472,7 +470,7 @@ These are the screen width and height of the screen where the experiment was con
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">🅿️ Plot Saccades</p>
+        <p class="prev-next-title">🅿️ lot Saccades</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
